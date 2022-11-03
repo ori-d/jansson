@@ -12,7 +12,7 @@ if (MSVC)
 	option(JANSSON_STATIC_CRT "Link the static CRT libraries" OFF )
 endif ()
 
-option(JANSSON_EXAMPLES "Compile example applications" ON)
+option(JANSSON_EXAMPLES "Compile example applications" OFF)
 
 if (UNIX)
    option(JANSSON_COVERAGE "(GCC Only! Requires gcov/lcov to be installed). Include target for doing coverage analysis for the test suite. Note that -DCMAKE_BUILD_TYPE=Debug must be set" OFF)
@@ -364,7 +364,7 @@ if (JANSSON_EXAMPLES)
 endif()
 
 # For building Documentation (uses Sphinx)
-option(JANSSON_BUILD_DOCS "Build documentation (uses python-sphinx)." ON)
+option(JANSSON_BUILD_DOCS "Build documentation (uses python-sphinx)." OFF)
 if (JANSSON_BUILD_DOCS)
    find_package(Sphinx)
 
@@ -450,7 +450,7 @@ if (JANSSON_BUILD_DOCS)
 endif ()
 
 
-option(JANSSON_WITHOUT_TESTS "Don't build tests ('make test' to execute tests)" OFF)
+option(JANSSON_WITHOUT_TESTS "Don't build tests ('make test' to execute tests)" ON)
 
 if (NOT JANSSON_WITHOUT_TESTS)
    option(JANSSON_TEST_WITH_VALGRIND "Enable valgrind tests." OFF)
