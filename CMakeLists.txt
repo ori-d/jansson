@@ -629,7 +629,7 @@ configure_package_config_file(
 #
 # Install targets.
 #
-option(JANSSON_INSTALL "Generate installation target" ON)
+option(JANSSON_INSTALL "Generate installation target" OFF)
 if (JANSSON_INSTALL)
   install(TARGETS jansson
           EXPORT janssonTargets
